@@ -16,17 +16,9 @@ import {
 } from '@chakra-ui/react';
 
 
-function TextbookCard({titlebook, bookurl, classname, price, onClick}) {
+function TextbookCardLarge({titlebook, bookurl, classname, price, onClick}) {
     return (
         <a>
-            <Card
-                direction={{ base: 'column', sm: 'row' }}
-                overflow='hidden'
-                variant='outline'
-                onClick={() => console.log('test')}
-                width="600px"
-                style={{ margin: '15px', }}
-            > 
             <Image
                 objectFit='cover'
                 maxW={{ base: '100%', sm: '200px' }}
@@ -53,7 +45,6 @@ function TextbookCard({titlebook, bookurl, classname, price, onClick}) {
                 </Button>
                 </CardFooter>
             </Stack>
-            </Card>
         </a>
     );
 }

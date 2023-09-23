@@ -12,12 +12,13 @@ import {
   Grid,
   theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
+import BookPage from './BookPage';
 import Message from './Message';
+
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/message" element={<Message />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/book/" element={<BookPage />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

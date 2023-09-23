@@ -1,0 +1,78 @@
+/* login page */
+.signIn-body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #9BCBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.signIn-card {
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 40px;
+    padding-bottom: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+div.signIn-card h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+div.signIn-card h4 {
+    color: #fff;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+div.signIn-card h5 {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+
+div.signIn-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+div.signIn-card label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+div.signIn-card input {
+    padding: 10px;
+    margin-top: 25px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+div.signIn-card button {
+    padding: 10px;
+    background-color: #fff;
+    color: #9BCBEB;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+div.signIn-card button:hover {
+    background-color: #70c1ff;
+}

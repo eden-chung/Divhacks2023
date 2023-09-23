@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 
 
-function TextbookCardLarge({titlebook, bookurl, classname, price, onClick}) {
+function TextbookCardLarge({titlebook, bookurl, classname, price}) {
     return (
         <a>
             <Image

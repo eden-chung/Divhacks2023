@@ -48,7 +48,7 @@ function TextbookCard({titlebook, bookurl, classname, price, onClick}) {
                 </CardBody>
 
                 <CardFooter>
-                <Button variant='solid' style={{ backgroundColor: '#9BCBEB', color: '#FFFFFF' }}>
+                <Button variant='solid' colorScheme='blue' onClick={onClick}>
                     Buy book
                 </Button>
                 </CardFooter>

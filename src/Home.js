@@ -21,11 +21,17 @@ import {
 
 import TextbookCard from './TextbookCard';
 
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
 
+    const navigate = useNavigate();
 
+    const handleGoToBooksPage = (titlebook, classname, price) => {
+      console.log("test");
+
+      navigate(`/book/${titlebook}/${classname}/${price}`);
+    };
 
     return (
         <>
@@ -40,22 +46,26 @@ export default function Home() {
                     width: '500px'
                 }}>
                     <TextbookCard
+                        id = "1"
                         titlebook="The Iliad"
                         bookurl="https://cloud.firebrandtech.com/api/v2/img/111/9780785841814/XL"
-                        classname="Lithum"   
+                        classname="HUMA-UN1001: Literature Humanities"
                         price="20$"
+                        onClick={() => handleGoToBooksPage("The Iliad", "HUMA-UN1001: Literature Humanities", "20")}
                     />
                     <TextbookCard
                         titlebook="Introduction to Java"
                         bookurl="https://m.media-amazon.com/images/I/517v7rb0cCL._AC_UF1000,1000_QL80_.jpg"
                         classname="COMS-W1004: Introduction to Java"   
                         price="3$"
+                        onClick={handleGoToBooksPage}
                     />
                     <TextbookCard
                         titlebook="Pride and Prejudice"
                         bookurl = "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg"
                         classname="Lithum"   
                         price="3$"
+                        onClick={handleGoToBooksPage}
                     />
                     <TextbookCard
                         titlebook="The C programming Language"

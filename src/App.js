@@ -14,14 +14,21 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
+import Message from './Message';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Home />
-      <SignIn />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/sign-in" element={<SignIn />} />
+        </Routes>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }

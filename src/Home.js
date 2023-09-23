@@ -21,7 +21,11 @@ import {
 
 import TextbookCard from './TextbookCard';
 
+import { Link } from 'react-router-dom';
+
 export default function Home() {
+
+
 
     return (
         <>
@@ -57,7 +61,7 @@ export default function Home() {
                         titlebook="The C programming Language"
                         bookurl = "https://m.media-amazon.com/images/I/51L7aRvbU-L._AC_UF1000,1000_QL80_.jpg"
                         classname="COMS-W3157: Advanced Programming"   
-                        price="3$"
+                        price="5$"
                     />
                 </VStack>
             </Center>

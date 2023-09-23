@@ -29,6 +29,13 @@ export default function Home() {
 
     return (
         <>
+        <Box className='nav-bar' bg='#9BCBEB' p={30} w='100%' alignContent={'center'}>
+            <Input className='search-bar' w='60%' placeholder='Search' variant='Outline'/>
+            <Text>
+                Sign in/Register
+            </Text>
+            <img src={logo} alt="Logo" />
+        </Box>
             <Heading
             style={{ textAlign: 'center',
             marginTop: '50px'}}>

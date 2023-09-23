@@ -1,4 +1,7 @@
 import React from 'react';
+import SignIn from "./components/SignIn";
+import './App.css';
+
 import {
   ChakraProvider,
   Box,
@@ -17,7 +20,8 @@ import Home from './Home';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Home/>
+      <Home />
+      <SignIn />
     </ChakraProvider>
   );
 }

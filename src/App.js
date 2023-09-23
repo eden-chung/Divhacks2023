@@ -1,4 +1,7 @@
 import React from 'react';
+import SignIn from "./components/SignIn";
+import './App.css';
+
 import {
   ChakraProvider,
   Box,
@@ -23,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/message" element={<Message />} />
+          <Route path="/sign-in" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

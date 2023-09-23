@@ -34,7 +34,8 @@ export default function Home() {
             <Text>
                 Sign in/Register
             </Text>
-            <img src={logo} alt="Logo" />
+            <Image src="https://icon2.cleanpng.com/20171220/jpe/shopping-cart-png-5a3a8fca5f1485.3449050215137873383895.jpg"
+             alt="Logo" />
         </Box>
             <Heading
             style={{ textAlign: 'center',

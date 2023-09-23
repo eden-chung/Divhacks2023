@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Input,
   Textarea,
@@ -6,18 +5,19 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
-  ModalBody,
+  ModalHeader,
   ModalCloseButton,
   useDisclosure,
 } from '@chakra-ui/react';
+import { EmailIcon } from '@chakra-ui/icons';
 
 const Message = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
+      <h3>Send a message to the seller:</h3>
       <div style={{ marginLeft: 10 }}>
         <Input
           variant="flushed"
@@ -63,7 +63,8 @@ const Message = () => {
           placeholder="Message to the seller..."
         />
         <Button
-          colorScheme="blue"
+          backgroundColor="#9BCBEB"
+          color="white"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -78,9 +79,11 @@ const Message = () => {
           <ModalOverlay />
           <ModalContent>
             <ModalCloseButton />
-            <ModalBody>Message successfully sent!</ModalBody>
+            <ModalHeader>
+              Message successfully sent! {<EmailIcon />}
+            </ModalHeader>
             <ModalFooter>
-              <Button onClick={onClose}>Close</Button>
+              <Button onClick={onClose}>OK</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

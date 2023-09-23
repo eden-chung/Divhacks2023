@@ -1,9 +1,21 @@
 import React from 'react';
-import { Input } from '@chakra-ui/react';
-import { Textarea } from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import {
+  Input,
+  Textarea,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+} from '@chakra-ui/react';
 
 const Message = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <div style={{ marginLeft: 10 }}>
@@ -15,6 +27,7 @@ const Message = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            marginBottom: 15,
           }}
         ></Input>
         <Input
@@ -25,6 +38,7 @@ const Message = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            marginBottom: 15,
           }}
         ></Input>
         <Input
@@ -35,26 +49,41 @@ const Message = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            marginBottom: 15,
           }}
         ></Input>
         <Textarea
           style={{
-            maxWidth: 300,
+            maxWidth: 500,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            marginBottom: 15,
           }}
           placeholder="Message to the seller..."
         />
         <Button
+          colorScheme="blue"
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}
+          onClick={onOpen}
         >
-          Submit
+          Send
         </Button>
+
+        <Modal onClose={onClose} isOpen={isOpen} isCentered>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalCloseButton />
+            <ModalBody>Message successfully sent!</ModalBody>
+            <ModalFooter>
+              <Button onClick={onClose}>Close</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </div>
     </>
   );

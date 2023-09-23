@@ -1,4 +1,7 @@
 import React from 'react';
+import SignIn from "./components/SignIn";
+import './App.css';
+
 import {
   ChakraProvider,
   Box,
@@ -10,20 +13,24 @@ import {
   theme,
 } from '@chakra-ui/react';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import BookPage from './BookPage';
+import Message from './Message';
+
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/sign-in" element={<SignIn />} />
           <Route path="/book/" element={<BookPage />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }

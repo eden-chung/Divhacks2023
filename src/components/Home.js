@@ -78,35 +78,35 @@ export default function Home() {
                         titlebook="The Iliad"
                         bookurl="https://tmm.chicagodistributioncenter.com/IsbnImages/9780226470498.jpg"
                         classname="HUMA-UN1001: Literature Humanities"
-                        price="20$"
+                        price="$10"
                         onClick={() => handleGoToBooksPage("The Iliad", "HUMA-UN1001: Literature Humanities", "20", 0)}
                     />
                     <TextbookCard
                         titlebook="Introduction to Java"
                         bookurl="https://m.media-amazon.com/images/I/517v7rb0cCL._AC_UF1000,1000_QL80_.jpg"
                         classname="COMS-W1004: Introduction to Java"   
-                        price="3$"
+                        price="$4"
                         onClick={() => handleGoToBooksPage("Introduction to Java", "COMS-W1004: Introduction to Java"  , "3", 1)}
                     />
                     <TextbookCard
                         titlebook="Pride and Prejudice"
                         bookurl = "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg"
                         classname="HUMA-UN1001: Literature Humanities" 
-                        price="3$"
+                        price="$3"
                         onClick={() => handleGoToBooksPage("Pride and Prejudice", "HUMA-UN1001: Literature Humanities"  , "3", 2)}
                     />
                     <TextbookCard
                         titlebook="The C programming Language"
                         bookurl = "https://m.media-amazon.com/images/I/51L7aRvbU-L._AC_UF1000,1000_QL80_.jpg"
                         classname="COMS-W3157: Advanced Programming"   
-                        price="5$"
+                        price="$5"
                         onClick={() => handleGoToBooksPage("The C programming Language", "COMS-W3157: Advanced Programming" , "5", 3)}
                     />
                     <TextbookCard
                         titlebook="The Wealth of Nations"
                         bookurl = "https://m.media-amazon.com/images/I/71yqXZeTuxL._AC_UF1000,1000_QL80_.jpg"
                         classname="COCI-1101: Contemporary Civilization"   
-                        price="10$"
+                        price="$10"
                         onClick={() => handleGoToBooksPage("The Wealth of Nations", "COCI-1101: Contemporary Civilization", "10", 4)}
                     />
                 </VStack>

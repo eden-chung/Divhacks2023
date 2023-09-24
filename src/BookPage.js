@@ -38,7 +38,7 @@ export default function BookPage() {
 
     const { titlebook, classname, price, index } = useParams();
 
-    const links = ["https://cloud.firebrandtech.com/api/v2/img/111/9780785841814/XL", "https://m.media-amazon.com/images/I/517v7rb0cCL._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/51L7aRvbU-L._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/71yqXZeTuxL._AC_UF1000,1000_QL80_.jpg"];
+    const links = ["https://tmm.chicagodistributioncenter.com/IsbnImages/9780226470498.jpg", "https://m.media-amazon.com/images/I/517v7rb0cCL._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/51L7aRvbU-L._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/71yqXZeTuxL._AC_UF1000,1000_QL80_.jpg"];
 
     console.log(index);
 

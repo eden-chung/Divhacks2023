@@ -76,7 +76,7 @@ export default function Home() {
                     <TextbookCard
                         id = "1"
                         titlebook="The Iliad"
-                        bookurl="https://cloud.firebrandtech.com/api/v2/img/111/9780785841814/XL"
+                        bookurl="https://tmm.chicagodistributioncenter.com/IsbnImages/9780226470498.jpg"
                         classname="HUMA-UN1001: Literature Humanities"
                         price="20$"
                         onClick={() => handleGoToBooksPage("The Iliad", "HUMA-UN1001: Literature Humanities", "20", 0)}

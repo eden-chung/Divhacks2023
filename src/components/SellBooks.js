@@ -47,7 +47,7 @@ function SellBooks() {
     }
 
     const handleNewListing = () => {
-        navigate(`/book`);
+        navigate(`/book/The%20Iliad/HUMA-UN1001:%20Literature%20Humanities/20/0`);
     };
 
     return (

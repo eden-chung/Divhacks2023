@@ -25,7 +25,13 @@ function TextbookCard({titlebook, bookurl, classname, price, onClick}) {
                 variant='outline'
                 onClick={() => console.log('test')}
                 width="600px"
-                style={{ margin: '15px', }}
+                bg="rgba(255, 255, 255, 0.3)"
+                style={{ margin: '15px'}}
+                padding="10px"
+                borderRadius="15px"
+                backdropFilter="blur(10px)" // Backdrop filter for blur
+                boxShadow="0 8px 16px rgba(0, 0, 0, 0.2)"
+                borderWidth={0}
             > 
             <Image
                 objectFit='cover'
@@ -48,7 +54,7 @@ function TextbookCard({titlebook, bookurl, classname, price, onClick}) {
                 </CardBody>
 
                 <CardFooter>
-                <Button variant='solid' style={{ backgroundColor: '#9BCBEB', color: '#FFFFFF' }}>
+                <Button variant='solid' colorScheme='blue' onClick={onClick}>
                     Buy book
                 </Button>
                 </CardFooter>

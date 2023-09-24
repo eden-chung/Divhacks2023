@@ -36,6 +36,10 @@ export default function Home() {
       navigate(`/book/${titlebook}/${classname}/${price}/${index}`);
     };
 
+    const handleSellBooks = () => {
+        navigate(`/sell-books`);
+      };
+
     const handleSignIn = () => {
         navigate(`/sign-in`);
       };
@@ -46,6 +50,9 @@ export default function Home() {
                 <HStack>
                 <Input className='search-bar' w='60%' placeholder='Search' variant='Outline' bg="white" _placeholder={{
     color: 'grey'}}/>
+                <Button colorScheme='blue' ml='auto' onClick={handleSellBooks} mr='-5px'>
+                    Sell books
+                </Button>
                 <Button colorScheme='blue' ml='auto' onClick={handleSignIn}>
                     Sign in/Register
                 </Button>

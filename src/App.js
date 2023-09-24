@@ -1,5 +1,6 @@
 import React from 'react';
 import SignIn from "./components/SignIn";
+import SellBooks from "./components/SellBooks";
 import './App.css';
 
 import {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/message" element={<Message />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sell-books" element={<SellBooks />} />
           <Route path="/book/:titlebook/:classname/:price" element={<BookPage />} />
         </Routes>
       </BrowserRouter>

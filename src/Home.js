@@ -16,7 +16,8 @@ import {
     Card,
     CardHeader, 
     CardBody,
-    CardFooter
+    CardFooter,
+    Input
 } from "@chakra-ui/react";
 
 import TextbookCard from './TextbookCard';
@@ -35,6 +36,14 @@ export default function Home() {
 
     return (
         <div style={{background: "#9BCBEB"}}>
+            <Box className='nav-bar' bg='#77b6e0' p={30} w='100%' alignContent={'center'}>
+                <HStack>
+                <Input className='search-bar' w='60%' placeholder='Search' variant='Outline'/>
+                <Button colorScheme='blue' ml='auto'>
+                    Sign in/Register
+                </Button>
+                </HStack>
+            </Box>
             <Heading
             style={{ textAlign: 'center', paddingTop: '50px'}}>
                 Welcome! Books currently available to buy

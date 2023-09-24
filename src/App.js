@@ -1,5 +1,6 @@
 import React from 'react';
 import SignIn from "./components/SignIn";
+import SellBooks from "./components/SellBooks";
 import './App.css';
 
 import {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/message" element={<Message />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/book/:titlebook/:classname/:price/:index" element={<BookPage />} />
+          <Route path="/sell-books" element={<SellBooks />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

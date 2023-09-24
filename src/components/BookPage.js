@@ -17,11 +17,17 @@ import {
     VStack,
     Heading,
     Image,
-    HStack
+    HStack,
+    Box,
+    Icon
 } from "@chakra-ui/react";
 
-import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { ArrowBackIcon } from '@chakra-ui/icons';
+
+import { useParams, useNavigate } from 'react-router-dom';
+
+import { MdShoppingCart } from 'react-icons/md'
+
 
 
 export default function BookPage() {
@@ -34,6 +40,18 @@ export default function BookPage() {
     const handleGoToMessage = (sellerUNI) => {
       navigate(`/message/`);
     };
+
+    const handleSellBooks = () => {
+        navigate(`/sell-books`);
+    };
+
+    const handleSignIn = () => {
+        navigate(`/sign-in`);
+    };
+
+    const handleGoToHome = () => {
+        navigate(`/`);
+    };
   
 
     const { titlebook, classname, price, index } = useParams();
@@ -44,15 +62,38 @@ export default function BookPage() {
 
     return (
         <div style={{background: "#9BCBEB"}}>
+            <Box className='nav-bar' bg='#77b6e0' p={30} w='100%' alignContent={'center'}>
+                <HStack justifyContent='space-between' alignItems='center'>
+                    <HStack>
+                        <button onClick={handleGoToHome}>
+                            <ArrowBackIcon />
+                        </button>
+                    </HStack>
+                    <HStack justify-content='flex-end'>
+                    <Button colorScheme='blue' onClick={handleSellBooks}>
+                        Sell books
+                    </Button>
+                    <Button colorScheme='blue' onClick={handleSignIn} ml='30px'>
+                        Sign in/Register
+                    </Button>
+                    <Icon 
+                        as={MdShoppingCart}
+                        boxSize={10}
+                        color="#3182ce"
+                        ml={10}
+                    />
+                    </HStack>
+                </HStack>
+            </Box>
             <Center>
             <Card
                 rounded="md" 
                 bg="rgba(255, 255, 255, 0.3)"
                 width="500px"
-                p={4}
+                p={10}
                 variant='outline'
-                style={{ margin: '15px'}}
-                padding="10px"
+                style={{ margin: '40px'}}
+                padding="15px"
                 borderRadius="15px"
                 backdropFilter="blur(10px)" // Backdrop filter for blur
                 boxShadow="0 8px 16px rgba(0, 0, 0, 0.2)"

@@ -12,8 +12,13 @@ import {
     ModalHeader,
     ModalCloseButton,
     useDisclosure,
+    HStack,
+    Icon
 } from '@chakra-ui/react';
 import { CheckIcon, ArrowBackIcon } from '@chakra-ui/icons';
+
+import { MdShoppingCart } from 'react-icons/md'
+
 
 function SellBooks() {
     const navigate = useNavigate();
@@ -50,14 +55,38 @@ function SellBooks() {
         navigate(`/book/The%20Iliad/HUMA-UN1001:%20Literature%20Humanities/20/0`);
     };
 
+    const handleSellBooks = () => {
+        navigate(`/sell-books`);
+      };
+
+    const handleSignIn = () => {
+        navigate(`/sign-in`);
+      };
+
     return (
         <div>
             <Box className='nav-bar' bg='#9BCBEB' p={30} w='100%' alignContent={'center'}>
-                <div>
-                    <button onClick={openCancelModal}>
-                        <ArrowBackIcon />
-                    </button>
-                </div>
+                <HStack justifyContent='space-between' alignItems='center'>
+                    <HStack>
+                        <button onClick={openCancelModal}>
+                            <ArrowBackIcon />
+                        </button>
+                    </HStack>
+                    <HStack justify-content='flex-end'>
+                    <Button colorScheme='blue' onClick={handleSellBooks}>
+                        Sell books
+                    </Button>
+                    <Button colorScheme='blue' onClick={handleSignIn} ml='30px'>
+                        Sign in/Register
+                    </Button>
+                    <Icon 
+                        as={MdShoppingCart}
+                        boxSize={10}
+                        color="#3182ce"
+                        ml={10}
+                    />
+                    </HStack>
+                </HStack>
             </Box>
             <div class="sell-books-body">
                 <div class="sell-books-card">

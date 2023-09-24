@@ -50,7 +50,7 @@ export default function Home() {
                 <HStack>
                 <Input className='search-bar' w='60%' placeholder='Search' variant='Outline' bg="white" _placeholder={{
     color: 'grey'}}/>
-                <Button colorScheme='blue' ml='auto' onClick={handleSellBooks} mr='-5px'>
+                <Button colorScheme='blue' ml='auto' onClick={handleSellBooks} mr='-145px'>
                     Sell books
                 </Button>
                 <Button colorScheme='blue' ml='auto' onClick={handleSignIn}>

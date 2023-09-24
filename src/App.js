@@ -16,9 +16,9 @@ import {
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './Home';
-import BookPage from './BookPage';
-import Message from './Message';
+import Home from './components/Home';
+import BookPage from './components/BookPage';
+import Message from './components/Message';
 
 
 function App() {

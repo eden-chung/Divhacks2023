@@ -28,7 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/message" element={<Message />} />
           <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/book/:titlebook/:classname/:price" element={<BookPage />} />
+          <Route path="/book/:titlebook/:classname/:price/:index" element={<BookPage />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

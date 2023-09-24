@@ -34,13 +34,13 @@ export default function BookPage() {
     const handleGoToMessage = (sellerUNI) => {
       navigate(`/message/`);
     };
-
-    const handleBuyNow = () => {
-        navigate(`/sign-in`);
-      };
   
 
-    const { titlebook, classname, price } = useParams();
+    const { titlebook, classname, price, index } = useParams();
+
+    const links = ["https://cloud.firebrandtech.com/api/v2/img/111/9780785841814/XL", "https://m.media-amazon.com/images/I/517v7rb0cCL._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/51L7aRvbU-L._AC_UF1000,1000_QL80_.jpg", "https://m.media-amazon.com/images/I/71yqXZeTuxL._AC_UF1000,1000_QL80_.jpg"];
+
+    console.log(index);
 
     return (
         <div style={{background: "#9BCBEB"}}>
@@ -68,7 +68,7 @@ export default function BookPage() {
                 <Image
                     objectFit='cover'
                     maxW={{ base: '100%', sm: '300px' }}
-                    src={'https://cloud.firebrandtech.com/api/v2/img/111/9780785841814/XL'}
+                    src={links[index]}
                     alt={titlebook}
                 />
 
